@@ -6,6 +6,9 @@
 
 Player take it in turn to pick two cards of their choosing. If the cards have the same rank (two sixes, for example), the player keeps the pair and plays again. If not, the cards are returned to their face-down position. Play until all the cards have been matched.
 
+Click [this link](https://fraxrm.github.io/memory-game-master-project-/) to start. 
+
+
 # Goals
 
 Match cards in less time with less moves to get the better rating. 
