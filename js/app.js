@@ -18,7 +18,7 @@ let matchedCard = document.getElementsByClassName("match");
 let moves = 0;
 let counter = document.querySelector(".moves");
 let closeicon = document.querySelector(".close");
-let modal = document.getElementById("popupfirst");
+let modal = document.getElementById("popup1");
 
 // Flipped cards
 
@@ -102,7 +102,7 @@ function startGame() {
 function cardOpen() {
 	openedCards.push(this);
 	var len = openedCards.length;
-	if (len === 2){
+	if (len === 2) {
 		moveCounter();
 		if(openedCards[0].type === openedCards[1].type) {
 			matched();
