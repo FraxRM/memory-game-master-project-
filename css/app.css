@@ -124,7 +124,7 @@ h1 {
     opacity: 0;
 }
 
-.overlay.taget {
+.overlay.target {
     visibility: visible;
     opacity: 1;
 }
