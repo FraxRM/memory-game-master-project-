@@ -54,7 +54,9 @@ Function to start a new game
 */
 
 function startGame() {
+	// Shuffle cards
 	cards = shuffle(cards);
+	// Remove existing cards
 	for (var i = 0; i < cards.length; i++){
 		deck.innerHTML = "";
 		[].forEach.call(cards, function(item){
@@ -66,7 +68,7 @@ function startGame() {
 	moves = 0;
 	counter.innerHTML = moves;
 	for (var i = 0; i < stars.length; i++){
-		stars[i].style.color = "#02ccba";
+		stars[i].style.color = "#FF5470";
 		stars[i].style.visibility = "visible";
 	}
 	second = 0;
@@ -115,7 +117,7 @@ function cardOpen() {
 // When card match
 
 function matched() {
-	openedCards[0].classList.add("match","disabled");
+	openedCards[0].classList.add("match", "disabled");
 	openedCards[1].classList.add("match", "disabled");
 	openedCards[0].classList.remove("show", "open", "no-event");
 	openedCards[1].classList.remove("show", "open", "no-event");
@@ -147,7 +149,7 @@ function disable() {
 // Enable and disable matched cards
 
 function enable() {
-	Array.prototype.filter.call(cards, function(card){
+	Array.prototype.filter.call(cards, function(card) {
 		card.classList.remove('disabled');
 		for (var i = 0; i < matchedCard.length; i++) {
 			matchedCard[i].classList.add("disabled");
@@ -159,7 +161,7 @@ function moveCounter() {
 	moves++;
 	counter.innerHTML = moves;
 	// Timer starts on first click
-	if (moves === 1){
+	if (moves === 1) {
 		second = 0;
 		minute = 0;
 		hour = 0;
@@ -168,7 +170,7 @@ function moveCounter() {
 	// setting rates 
 	if (moves > 8 && moves < 12) {
 		for (var i = 0; i < 3; i++){
-			if (i > 1){
+			if (i > 1) {
 				stars[i].style.visibility = "collapse";
 			}
 		}
